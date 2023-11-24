@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extract Tables from PDF</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Extract Tables from PDF</h1>
+        <span class="btns"><form method="POST" action="/upload" enctype="multipart/form-data">
+            <input class="choose-btn"  type="file" name="file" accept=".pdf" >
+            <input class="upload-btn" type="submit" value="开始上传">
+        </form></span>
+    </div>
+</body>
+</html>
+
+<style>
+.main{
+    height: 400px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;/*垂直交叉轴居中*/
+}
+
+.choose-btn{
+    font-size: 14px;
+}
+.btns{
+    margin-top:80px;
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    /*align-items: center;垂直交叉轴居中*/
+}
+.choose-btn::file-selector-button{
+    font-size: 15px;
+
+    height: 44px;
+    background-color: #1E9FFF;
+    border: 1px solid #1E9FFF;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+
+    background-image: url(/static/upload.png);/*设置小图标*/
+    background-size: 27%;/*小图标的大小*/
+    background-position: 3px 9px;/*小图标在input的位置*/
+    background-repeat: no-repeat;/*背景小图标不重复*/
+    padding: 7px 10px 8px 40px;/*设置input内边距*/
+}
+
+.upload-btn {
+
+  font-size: 14px;
+  color: #07c160;
+  background-color: #fff;
+  height: 44px;
+  padding: 0 15px;
+  margin-left:18px;
+
+  border: 1px solid #07c160;
+  line-height: 1.2;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  outline: none;
+  position: relative;
+}
+.upload-btn:hover {
+            /* 盒子阴影 */
+            box-shadow: -4px 4px 10px 5px rgba(0, 0, 0, .3);
+            /* 盒子向上移动效果，改变上外边距 */
+            color:#fff;
+            background-color: #07c160;
+}
+
+
+</style>
